@@ -5,6 +5,10 @@ import pandas as pd
 import plotly.express as px
 from database import get_dashboard_stats, get_products, get_sales, get_orders
 
+# Auto-seed on first run (e.g., Streamlit Cloud deployment)
+if not get_products():
+    import seed_data  # noqa: F401
+
 st.set_page_config(
     page_title="TikTok Seller Suite",
     page_icon="💰",
