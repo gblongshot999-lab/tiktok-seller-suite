@@ -2,6 +2,8 @@
 
 import streamlit as st
 import pandas as pd
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from datetime import date, timedelta
 from database import get_products, add_order, get_orders, update_order_status
 

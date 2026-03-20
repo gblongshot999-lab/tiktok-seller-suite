@@ -2,6 +2,8 @@
 
 import streamlit as st
 import pandas as pd
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import plotly.express as px
 from database import get_products, add_sale, get_sales
 
